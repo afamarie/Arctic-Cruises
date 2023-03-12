@@ -3,7 +3,7 @@ import rename from 'gulp-rename';
 import imagemin from 'gulp-imagemin';
 import webp from 'gulp-webp';
 import svgstore from 'gulp-svgstore';
-import pngQuant from 'imagemin-pngquant';
+//import pngQuant from 'imagemin-pngquant';
 import mozJpeg from 'imagemin-mozjpeg';
 import svgo from 'imagemin-svgo';
 
@@ -42,18 +42,18 @@ const optimizeJpg = () =>
       .pipe(imagemin([mozJpeg({quality: 90, progressive: true})]))
       .pipe(gulp.dest('build/img'));
 
-const optimizePng = () =>
-  gulp
-      .src('build/img/**/*.png')
-      .pipe(
-          imagemin([
-            pngQuant({
-              speed: 1,
-              strip: true,
-              dithering: 1,
-              quality: [0.8, 0.9],
-            })]))
-      .pipe(gulp.dest('build/img'));
+// const optimizePng = () =>
+//   gulp
+//       .src('build/img/**/*.png')
+//       .pipe(
+//           imagemin([
+//             pngQuant({
+//               speed: 1,
+//               strip: true,
+//               dithering: 1,
+//               quality: [0.8, 0.9],
+//             })]))
+//       .pipe(gulp.dest('build/img'));
 
 /*
   Optional tasks
@@ -74,4 +74,6 @@ const createWebp = () => {
       .pipe(gulp.dest(`source/img/${root}`));
 };
 
-export {sprite, createWebp, optimizeSvg, optimizePng, optimizeJpg};
+// optimizePng deleted
+
+export {sprite, createWebp, optimizeSvg, optimizeJpg};
