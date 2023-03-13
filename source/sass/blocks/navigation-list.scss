@@ -23,9 +23,40 @@
 
   @include vp-767 {
     flex-direction: column;
-    gap: 10px;
+    gap: 7px;
     font-size: 18px;
     line-height: 22px;
+    color: $color-tangaroa;
+  }
+}
+
+.header .navigation-list {
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.header--no-js .navigation-list {
+  @include vp-767 {
+    display: flex;
+    filter: none;
+  }
+}
+
+.header--menu-opened .navigation-list {
+  @include vp-767 {
+    display: flex;
+    padding: 28px 0;
+    filter: none;
+  }
+}
+
+.footer .navigation-list {
+  margin-right: auto;
+
+  @include vp-1023 {
+    font-size: 12px;
+    line-height: 15px;
   }
 }
 
@@ -36,38 +67,5 @@
 .navigation-list__link {
   @include vp-767 {
     padding: 10px;
-  }
-}
-
-.header .navigation-list {
-  @include vp-767 {
-    visibility: collapse;
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height $trans-default;
-  }
-}
-
-.menu-opened .header .navigation-list {
-  @include vp-767 {
-    position: absolute;
-    visibility: visible;
-    padding: 75px 30px 30px 15px;
-    width: calc(100% - 36px);
-    height: 100vh;
-    max-height: 100vh;
-    left: 36px;
-    top: 0;
-    background-color: $color-seashell;
-    color: $color-tangaroa;
-  }
-}
-
-.footer .navigation-list {
-  margin-right: auto;
-
-  @include vp-1023 {
-    font-size: 12px;
-    line-height: 15px;
   }
 }

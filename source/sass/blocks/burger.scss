@@ -1,11 +1,15 @@
 .burger {
   display: none;
 
+  .header--no-js & {
+    display: none;
+  }
+
   @include vp-767 {
     position: absolute;
     display: inline-block;
     padding: 10px;
-    right: 10px;
+    right: 0;
     box-sizing: border-box;
     border: none;
     background-color: transparent;
@@ -40,7 +44,7 @@
   }
 }
 
-.menu-opened .burger__cross {
+.header--menu-opened .burger__cross {
   &::after,
   &::before {
     width: 19px;
