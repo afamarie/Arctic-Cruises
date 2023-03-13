@@ -28,11 +28,15 @@ const optimizeSvg = () =>
                 {
                   name: 'removeRasterImages',
                   active: true,
-                },
-                {
-                  name: 'removeUselessStrokeAndFill',
-                  active: false,
-                }],
+                }
+                // {
+                //   name: 'removeUselessStrokeAndFill',
+                //   active: false,
+                // },
+                // {
+                //   removeAttrs: {attrs: '(stroke|fill)'},
+                // }
+              ],
             })]))
       .pipe(gulp.dest('build/img'));
 
