@@ -14,11 +14,13 @@
 .social-list__link {
   display: inline-block;
   padding: 10px;
+  color: $color-seashell;
 }
 
 
 .social-list__icon {
   height: 20px;
+  fill: currentcolor;
 
   @include vp-1023 {
     height: 20px;

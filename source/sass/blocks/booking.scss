@@ -1,0 +1,140 @@
+.booking {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: image-set(url("../img/backgrounds/form.webp") 1x,
+  url("../img/backgrounds/form@2x.webp") 2x,
+  url("../img/backgrounds/form.jpg") 1x,
+  url("../img/backgrounds/form@2x.jpg") 2x);
+
+  @include vp-1023 {
+    padding-top: 87px;
+    padding-bottom: 100px;
+    background-image: image-set(url("../img/backgrounds/form_tablet.webp") 1x,
+    url("../img/backgrounds/form_tablet@2x.webp") 2x,
+    url("../img/backgrounds/form_tablet.jpg") 1x,
+    url("../img/backgrounds/form_tablet@2x.jpg") 2x);
+  }
+
+  @include vp-767 {
+    padding-top: 60px;
+    padding-bottom: 68px;
+    background-image: image-set(url("../img/backgrounds/form_mobile.webp") 1x,
+    url("../img/backgrounds/form_mobile@2x.webp") 2x,
+    url("../img/backgrounds/form_mobile.jpg") 1x,
+    url("../img/backgrounds/form_mobile@2x.jpg") 2x);
+  }
+}
+
+.booking__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h2 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 60px;
+  }
+
+  p {
+    margin-top: 8px;
+    width: 59%;
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  @include vp-1023 {
+    align-items: center;
+
+    h2,
+    p {
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 34px;
+      line-height: 51px;
+    }
+
+    p {
+      width: 59%;
+      font-size: 18px;
+      line-height: 27px;
+    }
+  }
+
+  @include vp-767 {
+    h2 {
+      font-size: 24px;
+      line-height: 31px;
+    }
+
+    p {
+      padding-top: 5px;
+      width: 90%;
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+}
+
+.booking__form {
+  display: flex;
+  padding: 45px 50px 50px;
+  flex-wrap: wrap;
+  background-color: $color-tangaroa;
+  color: $color-seashell;
+
+  fieldset {
+    display: flex;
+    flex: 0 1 303px;
+    flex-direction: column;
+    border: 0;
+    gap: 20px;
+  }
+
+  legend {
+    display: flex;
+    padding-bottom: 26px;
+    max-width: fit-content;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  @include vp-1023 {
+    width: 403px;
+    justify-self: center;
+  }
+
+  @include vp-767 {
+    padding: 35px 30px 40px;
+    width: 100%;
+
+    legend {
+      text-align: center;
+      line-height: 25px;
+    }
+  }
+}
+
+.booking__submit {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 10px 46px;
+  flex: 1 1 303px;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 600;
+  background-color: $color-seashell;
+  color: $color-tangaroa;
+  border: none;
+
+  @include vp-767 {
+    margin-top: 25px;
+  }
+}
