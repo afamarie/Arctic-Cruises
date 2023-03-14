@@ -42,7 +42,8 @@
 
   p {
     margin-top: 8px;
-    width: 59%;
+    margin-bottom: 5px;
+    max-width: 352px;
     font-size: 18px;
     line-height: 27px;
   }
@@ -57,17 +58,19 @@
 
     h2 {
       font-size: 34px;
-      line-height: 51px;
+      line-height: 50px;
     }
 
     p {
-      width: 59%;
       font-size: 18px;
       line-height: 27px;
     }
   }
 
   @include vp-767 {
+    padding-left: 20px;
+    padding-right: 20px;
+
     h2 {
       font-size: 24px;
       line-height: 31px;
@@ -75,7 +78,6 @@
 
     p {
       padding-top: 5px;
-      width: 90%;
       font-size: 16px;
       line-height: 22px;
     }
@@ -91,7 +93,7 @@
 
   fieldset {
     display: flex;
-    flex: 0 1 303px;
+    flex: 1 1 auto;
     flex-direction: column;
     border: 0;
     gap: 20px;
@@ -126,7 +128,7 @@
   display: inline-block;
   margin-top: 30px;
   padding: 10px 46px;
-  flex: 1 1 303px;
+  flex: 1 1 auto;
   font-size: 14px;
   line-height: 21px;
   font-weight: 600;

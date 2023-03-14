@@ -2,7 +2,7 @@
   width: 100%;
   max-width: 1920px;
   margin: 0 auto;
-  padding: 0 103px;
+  padding: 0 clamp(45px, 7.5vw, 103px);
 
   @include vp-1023 {
     padding: 0 45px;
@@ -55,11 +55,17 @@
 .footer .container {
   margin-right: auto;
   padding-top: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 43px;
+  padding-right: 95px;
+
+  @include vp-1023 {
+    padding-right: 35px;
+  }
 
   @include vp-767 {
     padding-top: 40px;
-    padding-bottom: 40px;
+    padding-bottom: 35px;
+    flex-direction: column;
   }
 }
 
@@ -81,21 +87,39 @@
 
 .booking .container {
   display: grid;
-  padding-left: 163px;
-  padding-right: 163px;
-  grid-template-columns: 1fr 403px;
-  gap: 50px;
+  padding-left: clamp(45px, 12vw, 163px);
+  padding-right: clamp(45px, 12vw, 163px);
+  grid-template-columns: minmax(35%, 520px) minmax(30%, 403px);
+  justify-content: center;
+  gap: clamp(50px, 12%, 144px);
 
   @include vp-1023 {
     padding-left: 174px;
     padding-right: 174px;
     grid-template-columns: 1fr;
-    gap: 35px;
+    gap: 45px;
   }
 
   @include vp-767 {
     padding-left: 15px;
     padding-right: 15px;
-    gap: 17px;
+    gap: 30px;
+  }
+}
+
+.contacts .container {
+  display: grid;
+  grid-template-columns: minmax(40%, 560px) minmax(40%, 500px);
+  justify-content: center;
+  gap: 20px clamp(30px, 10vw, 100px);
+
+  @include vp-1023 {
+    gap: 15px 30px;
+  }
+
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
   }
 }

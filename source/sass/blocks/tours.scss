@@ -41,6 +41,10 @@
   list-style: none;
 
   @include vp-1279 {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @include vp-1023 {
     padding-top: 52px;
     grid-template-columns: 1fr 1fr;
   }
@@ -54,30 +58,61 @@
 }
 
 .tours__list-item {
+  position: relative;
   display: flex;
-  padding: 28px 25px 35px;
+  padding: 28px 25px 22px;
   flex-direction: column;
   background-color: $color-tangaroa;
   color: $color-seashell;
 
   h3 {
     margin: 0;
+    padding-left: 5px;
     font-size: 18px;
     line-height: 27px;
     font-weight: 500;
+    order: 3;
+    z-index: 1;
+  }
+
+  &::after {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: $black-to-bottom;
+    z-index: 0;
+    content: "";
+  }
+
+  &:focus h3 {
+    padding-left: 0;
+    order: 1;
+  }
+
+  &:focus::after {
+    display: none;
   }
 
   @include vp-1023 {
-    padding: 35px;
+    padding: 30px 35px 28px;
+
+    h3 {
+      padding-left: 0;
+    }
   }
 
   @include vp-767 {
-    padding: 28px 25px 35px;
+    padding: 28px 25px 20px;
   }
 }
 
 .tours__card-content {
+  visibility: hidden;
   margin: 13px 0 0;
+  order: 1;
 
   dt,
   dd {
@@ -95,16 +130,58 @@
     padding-top: 2px;
     font-weight: 400;
   }
+
+  .tours__list-item:focus & {
+    visibility: visible;
+    order: 2;
+  }
+
+  @include vp-1023 {
+    dd {
+      padding-bottom: 10px;
+    }
+  }
 }
 
 .tours__link {
   display: inline-block;
+  visibility: hidden;
   margin-top: auto;
   padding: 10px 46px;
+  margin-bottom: 12px;
   width: 100%;
+  order: 2;
   font-size: 14px;
   line-height: 21px;
   font-weight: 600;
+  text-align: center;
   background-color: $color-seashell;
   color: $color-tangaroa;
+
+  .tours__list-item:focus & {
+    visibility: visible;
+    order: 3;
+  }
+
+  @include vp-1023 {
+    margin-bottom: 6px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 12px;
+  }
+}
+
+.tours__image {
+  position: absolute;
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  object-fit: cover;
+
+  .tours__list-item:focus & {
+    visibility: hidden;
+  }
 }

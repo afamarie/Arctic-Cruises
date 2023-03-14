@@ -1,28 +1,36 @@
 .social-list {
   display: flex;
-  margin: 0 0 0 30px;
-  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: auto;
+  padding: 10px 0 0 0;
   flex-wrap: wrap;
   list-style: none;
   gap: 7px;
 
   @include vp-1023 {
+    padding-top: 0;
     gap: 2px;
+  }
+
+  @include vp-767 {
+    margin-left: -12px;
+    padding-top: 20px;
+    gap: 0;
   }
 }
 
 .social-list__link {
-  display: inline-block;
   padding: 10px;
   color: $color-seashell;
 }
-
 
 .social-list__icon {
   height: 20px;
   fill: currentcolor;
 
   @include vp-1023 {
-    height: 20px;
+    height: 16px;
+    width: 16px;
   }
 }
