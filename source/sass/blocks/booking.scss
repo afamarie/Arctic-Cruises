@@ -135,8 +135,14 @@
   background-color: $color-seashell;
   color: $color-tangaroa;
   border: none;
+  transition: opacity $trans-default;
+  cursor: pointer;
 
   @include vp-767 {
     margin-top: 25px;
+  }
+
+  @include hover-focus {
+    opacity: 0.8;
   }
 }

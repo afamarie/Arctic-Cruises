@@ -44,13 +44,12 @@
   }
 
   &.is-invalid {
-    input,
-    textarea {
-      border: 2px solid #ff1553;
+    input {
+      background-color: #ffa0b9;
 
       &:focus,
       &:hover {
-        border: 2px solid rgba(#ff1553, 0.5);
+        background-color: rgba(#ffa0b9, 0.8);
       }
     }
   }

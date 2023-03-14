@@ -59,6 +59,8 @@ export class Form {
   }
 
   _onFormSubmit(event, callback = null) {
+    const result = this.validateForm(event.target);
+
     if (this.validateForm(event.target) && callback) {
       this._callbacks[callback].successCallback(event);
       if (this._callbacks[callback].reset) {
@@ -71,6 +73,9 @@ export class Form {
     if (!this.validateForm(event.target) && callback) {
       this._callbacks[callback].errorCallback(event);
       return;
+    }
+    if (result === true) {
+      event.target.submit();
     }
   }
 

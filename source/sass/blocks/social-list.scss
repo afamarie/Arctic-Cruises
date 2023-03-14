@@ -23,6 +23,12 @@
 .social-list__link {
   padding: 10px;
   color: $color-seashell;
+  opacity: 1;
+  transition: opacity $trans-default;
+
+  @include hover-focus {
+    opacity: 0.8;
+  }
 }
 
 .social-list__icon {

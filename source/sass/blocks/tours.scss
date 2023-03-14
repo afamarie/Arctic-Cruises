@@ -155,8 +155,10 @@
   line-height: 21px;
   font-weight: 600;
   text-align: center;
+  opacity: 1;
   background-color: $color-seashell;
   color: $color-tangaroa;
+  transition: opacity $trans-default;
 
   .tours__list-item:focus & {
     visibility: visible;
@@ -170,6 +172,10 @@
   @include vp-767 {
     margin-bottom: 12px;
   }
+
+  @include hover-focus {
+    opacity: 0.8;
+  }
 }
 
 .tours__image {
@@ -181,7 +187,10 @@
   left: 0;
   object-fit: cover;
 
+  transition: height $trans-default;
+
   .tours__list-item:focus & {
-    visibility: hidden;
+    visibility: collapse;
+    height: 0;
   }
 }

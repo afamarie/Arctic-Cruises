@@ -2,9 +2,15 @@
   display: inline-block;
   margin-right: 40px;
   color: $color-seashell;
+  opacity: 1;
+  transition: opacity $trans-default;
 
   @include vp-1023 {
     margin-right: 25px;
+  }
+
+  @include hover-focus {
+    opacity: 0.8;
   }
 }
 

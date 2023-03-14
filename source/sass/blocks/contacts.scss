@@ -88,4 +88,13 @@
   @include vp-767 {
     order: 2;
   }
+
+  a {
+    opacity: 1;
+    transition: opacity $trans-default;
+
+    @include hover-focus {
+      opacity: 0.8;
+    }
+  }
 }

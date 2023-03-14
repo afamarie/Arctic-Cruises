@@ -11,15 +11,21 @@
     appearance: none;
     background-color: $color-seashell;
 
-    &:checked::after {
-      position: absolute;
-      width: 100%;
-      height: 100%;
+    transition: background-color $trans-default;
+
+    &:hover {
+      background-color: rgba($color-seashell, 0.5);
+    }
+
+    &:focus {
+      background-color: rgba($color-seashell, 0.8);
+    }
+
+    &:checked {
       background-image: url("../img/svg/checkbox.svg");
       background-repeat: no-repeat;
       background-position: center;
       background-size: 60%;
-      content: "";
     }
   }
 
@@ -31,11 +37,32 @@
     order: 2;
     color: $color-seashell;
     cursor: pointer;
+
+    transition: color $trans-default;
+
+    &:hover {
+      color: rgba($color-seashell, 0.5);
+    }
+
+    &:focus {
+      color: rgba($color-seashell, 0.8);
+    }
   }
 
   &.is-invalid {
-    label span {
-      color: #ff1553;
+    label {
+      color: #ffa0b9;
+    }
+
+    input {
+      background-color: #ffa0b9;
+    }
+
+    &:focus,
+    &:hover {
+      input {
+        background-color: rgba(#ffa0b9, 0.8);
+      }
     }
   }
 
