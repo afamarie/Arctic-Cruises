@@ -85,9 +85,7 @@
 }
 
 .booking__form {
-  display: flex;
   padding: 45px 50px 50px;
-  flex-wrap: wrap;
   background-color: $color-tangaroa;
   color: $color-seashell;
 
@@ -128,7 +126,7 @@
   display: inline-block;
   margin-top: 30px;
   padding: 10px 46px;
-  flex: 1 1 auto;
+  width: 100%;
   font-size: 14px;
   line-height: 21px;
   font-weight: 600;

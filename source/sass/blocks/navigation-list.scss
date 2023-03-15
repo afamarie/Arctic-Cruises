@@ -38,6 +38,10 @@
 .header--no-js .navigation-list {
   @include vp-767 {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
     color: $color-tangaroa;
     filter: none;
   }
@@ -63,23 +67,23 @@
   }
 
   @include vp-767 {
-    padding-top: 15px;
+    padding-top: 21px;
+    gap: 17px;
   }
 }
 
-.navigation-list__item {
-  display: flex;
-}
-
 .navigation-list__link {
-  opacity: 1;
-  transition: opacity $trans-default;
+  transition: color $trans-default;
 
   @include vp-767 {
     padding: 5px 0;
   }
 
   @include hover-focus {
-    opacity: 0.8;
+    color: $color-electric-blue;
+  }
+
+  @include active {
+    color: $color-white;
   }
 }

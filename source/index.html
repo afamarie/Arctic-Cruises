@@ -15,8 +15,9 @@
   <body>
     <div class="wrapper">
       <header class="header header--no-js">
-        <div class="container">
-          <a class="logo" href="#">
+        <div class="header__overlay"></div>
+        <div class="container container--header-content">
+          <a class="logo" href="index.html" aria-current="page" aria-label="Главная страница.">
             <svg class="logo__icon" width="70" height="38">
               <use xlink:href="img/sprite.svg#logo"></use>
             </svg>
@@ -40,14 +41,12 @@
             <span class="burger__cross"></span>
           </button>
         </div>
+        <div class="container container--intro-content">
+          <h1>Круизы в&nbsp;Антарктику</h1>
+          <p>Волшебный мир айсбергов и&nbsp;пингвинов</p>
+        </div>
       </header>
       <main>
-        <section class="intro" id="intro">
-          <div class="container">
-            <h1>Круизы в&nbsp;Антарктику</h1>
-            <p>Волшебный мир айсбергов и&nbsp;пингвинов</p>
-          </div>
-        </section>
         <section class="about" id="about">
           <div class="container">
             <div class="about__text">
@@ -68,24 +67,15 @@
           <div class="container">
             <h2>Преимущества</h2>
             <ul class="advantages__list">
-              <li class="advantages__list-item">
-                <svg class="advantages__icon" width="27" height="32">
-                  <use xlink:href="img/sprite.svg#ship"></use>
-                </svg>
+              <li class="advantages__list-item advantages__list-item--ship">
                 <h3>Небольшой круизный лайнер</h3>
                 <p>Круизный лайнер, рассчитанный всего лишь на&nbsp;300&nbsp;гостей, поможет избежать шума и&nbsp;очередей и&nbsp;даст возможность насладиться видами и&nbsp;природой.</p>
               </li>
-              <li class="advantages__list-item">
-                <svg class="advantages__icon" width="38" height="32">
-                  <use xlink:href="img/sprite.svg#check"></use>
-                </svg>
+              <li class="advantages__list-item advantages__list-item--check">
                 <h3>Система все включено</h3>
                 <p>Все наши круизы работают по системе &laquo;Все Включено&raquo;. Великолепные блюда и&nbsp;безлимитный бар доступны для вас 24&nbsp;часа.</p>
               </li>
-              <li class="advantages__list-item">
-                <svg class="advantages__icon" width="44" height="32">
-                  <use xlink:href="img/sprite.svg#boat"></use>
-                </svg>
+              <li class="advantages__list-item advantages__list-item--boat">
                 <h3>Экскурсионные туры на&nbsp;Zodiac</h3>
                 <p>Экскурсионные туры к&nbsp;берегам Антарктиды совершаются на&nbsp;оборудованных лодках типа Zodiac c&nbsp;опытными экскурсоводами.</p>
               </li>
@@ -238,7 +228,7 @@
                   <dt>Продолжительность</dt>
                   <dd>17&nbsp;дней</dd>
                   <dt>Цена</dt>
-                  <dd>12500&nbsp;$
+                  <dd>12500&nbsp;$</dd>
                 </dl>
                 <a class="tours__link" href="#">Забронировать</a>
                 <picture>
@@ -308,8 +298,8 @@
         <section class="contacts" id="contacts">
           <div class="container">
             <h2 class="visually-hidden">Контакты</h2>
-            <iframe class = "contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037861610246!2d30.3230474!3d59.9387165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2sBolshaya%20Konyushennaya%20St%2C%2019%2F8%2C%20Sankt-Peterburg%2C%20Russia%2C%20191186!5e0!3m2!1sen!2skz!4v1678786201518!5m2!1sen!2skz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            <b>У&nbsp;вас ещё остались вопросы или сомнения? Приезжайте к&nbsp;нам в&nbsp;офис и&nbsp;мы&nbsp;вам все расскажем.</b>
+            <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037861610246!2d30.3230474!3d59.9387165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2sBolshaya%20Konyushennaya%20St%2C%2019%2F8%2C%20Sankt-Peterburg%2C%20Russia%2C%20191186!5e0!3m2!1sen!2skz!4v1678786201518!5m2!1sen!2skz" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Google maps"></iframe>
+            <p>У&nbsp;вас ещё остались вопросы или сомнения? Приезжайте к&nbsp;нам в&nbsp;офис и&nbsp;мы&nbsp;вам все расскажем.</p>
             <address class="contacts__address">
               <p>г.&nbsp;Санкт Петербург, ул.&nbsp;Большая Конюшенная, 19/8</p>
               <a href="tel:88002000000">8-800-200-00-00</a>
@@ -319,7 +309,7 @@
       </main>
       <footer class="footer">
         <div class="container">
-          <a class="logo" href="#">
+          <a class="logo" href="index.html" aria-current="page" aria-label="Главная страница.">
             <svg class="logo__icon" width="70" height="38">
               <use xlink:href="img/sprite.svg#logo"></use>
             </svg>

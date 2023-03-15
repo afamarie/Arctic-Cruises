@@ -13,14 +13,14 @@
   }
 }
 
-.header .container,
+.header .container--header-content,
 .footer .container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
-.header .container {
+.header .container--header-content {
   padding-top: 35px;
   padding-bottom: 35px;
 
@@ -36,18 +36,44 @@
   }
 }
 
-.header--menu-opened .container {
+.header .container--intro-content {
+  @include vp-1024 {
+    padding-left: clamp(45px, 14.5vw, 198px);
+    padding-right: clamp(45px, 14.5vw, 198px);
+    min-height: 536px;
+    padding-top: 156px;
+    padding-bottom: 100px;
+  }
+
+  @include vp-1023 {
+    min-height: 553px;
+    padding-top: 180px;
+    padding-bottom: 45px;
+  }
+
+  @include vp-767 {
+    padding-top: 110px;
+    min-height: 432px;
+  }
+}
+
+.header--menu-opened .container--header-content {
+  position: absolute;
   margin-right: 0;
   height: 100vh;
   width: calc(100% - 36px);
+  right: 0;
+  top: 0;
   justify-content: flex-start;
   background-color: $color-seashell;
 }
 
-.header--no-js .container {
+.header--no-js .container--header-content {
   @include vp-767 {
-    margin-right: 0;
-    justify-content: flex-start;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
     background-color: $color-seashell;
   }
 }
@@ -64,7 +90,7 @@
 
   @include vp-767 {
     padding-top: 40px;
-    padding-bottom: 35px;
+    padding-bottom: 30px;
     flex-direction: column;
   }
 }
@@ -111,7 +137,7 @@
   display: grid;
   grid-template-columns: minmax(40%, 560px) minmax(40%, 500px);
   justify-content: center;
-  gap: 20px clamp(30px, 10vw, 100px);
+  gap: 20px clamp(30px, 10%, 100px);
 
   @include vp-1023 {
     gap: 15px 30px;

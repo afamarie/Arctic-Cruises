@@ -67,14 +67,12 @@
 }
 
 .advantages__list-item {
-  display: flex;
-  padding: 30px 30px 45px;
-  flex-direction: column;
+  position: relative;
+  padding: 80px 30px 45px;
   background-color: $color-seashell;
 
   h3 {
     margin: 0;
-    padding-top: 1em;
     font-weight: 500;
     font-size: 18px;
     line-height: 27px;
@@ -87,11 +85,46 @@
     line-height: 20px;
   }
 
+  &--ship::before,
+  &--check::before,
+  &--boat::before {
+    position: absolute;
+    height: 32px;
+    width: 44px;
+    top: 30px;
+    left: 30px;
+    background-position: left top;
+    background-size: contain;
+    background-repeat: no-repeat;
+    content: "";
+  }
+
+  &--ship::before {
+    background-image: url("../img/svg/ship.svg");
+  }
+
+  &--check::before {
+    background-image: url("../img/svg/check.svg");
+  }
+
+  &--boat::before {
+    background-image: url("../img/svg/boat.svg");
+  }
+
   @include vp-1023 {
-    padding: 27px 15px 20px 20px;
+    padding: 70px 15px 20px 20px;
 
     h3 {
       line-height: 25px;
+    }
+
+    &--ship::before,
+    &--check::before,
+    &--boat::before {
+      height: 26px;
+      width: 36px;
+      top: 26px;
+      left: 20px;
     }
   }
 }
