@@ -1,16 +1,21 @@
 .logo {
   display: inline-block;
   margin-right: 40px;
+  width: fit-content;
+  height: fit-content;
   color: $color-seashell;
-  opacity: 1;
-  transition: opacity $trans-default;
+  transition: color $trans-default;
 
   @include vp-1023 {
     margin-right: 25px;
   }
 
   @include hover-focus {
-    opacity: 0.8;
+    color: $color-electric-blue;
+  }
+
+  @include active {
+    color: $color-white;
   }
 }
 
@@ -19,6 +24,11 @@
   @include vp-767 {
     color: $color-tangaroa;
   }
+}
+
+.header--menu-opened .logo {
+  margin-left: 35px;
+  z-index: 1;
 }
 
 .logo__icon {

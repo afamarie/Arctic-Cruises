@@ -49,10 +49,18 @@
 
 .header--menu-opened .navigation-list {
   @include vp-767 {
+    position: absolute;
     display: flex;
-    padding: 30px 10px 0;
-    gap: 19px;
+    padding: 85px 25px 25px;
+    height: 100vh;
+    width: calc(100% - 36px);
+    right: 0;
+    top: 0;
+    flex-wrap: nowrap;
+    gap: 28px;
     color: $color-tangaroa;
+    background-color: $color-seashell;
+    overflow-y: scroll;
     filter: none;
   }
 }

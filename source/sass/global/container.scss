@@ -58,19 +58,11 @@
 }
 
 .header--menu-opened .container--header-content {
-  position: absolute;
-  margin-right: 0;
-  height: 100vh;
-  width: calc(100% - 36px);
-  right: 0;
-  top: 0;
-  justify-content: flex-start;
-  background-color: $color-seashell;
+  position: relative;
 }
 
 .header--no-js .container--header-content {
   @include vp-767 {
-
     flex-direction: row;
     flex-wrap: wrap;
     gap: 15px;
