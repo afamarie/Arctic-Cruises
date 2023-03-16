@@ -20,15 +20,10 @@
 }
 
 .header--no-js .logo,
-.header--menu-opened .logo {
+.is-open .logo {
   @include vp-767 {
     color: $color-tangaroa;
   }
-}
-
-.header--menu-opened .logo {
-  margin-left: 35px;
-  z-index: 1;
 }
 
 .logo__icon {

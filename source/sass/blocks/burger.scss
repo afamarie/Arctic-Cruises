@@ -16,7 +16,7 @@
   }
 }
 
-.header--menu-opened .burger {
+.is-open .burger {
   right: 0;
 }
 
@@ -48,7 +48,7 @@
   }
 }
 
-.header--menu-opened .burger__cross {
+.is-open .burger__cross {
   &::after,
   &::before {
     width: 19px;

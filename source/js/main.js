@@ -1,6 +1,9 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {Form} from './modules/form-validate/form';
-import './modules/burger';
+import {Burger} from './modules/header/burger';
+
+const header = document.querySelector('.header');
+header.classList.remove('header--no-js');
 
 // ---------------------------------
 
@@ -20,6 +23,8 @@ window.addEventListener('DOMContentLoaded', () => {
     const form = new Form();
     window.form = form;
     form.init();
+    const burger = new Burger();
+    burger.init();
   });
 });
 
