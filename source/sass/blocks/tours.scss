@@ -70,8 +70,14 @@
   }
 
   &:focus-within h3,
-  &:hover h3 {
+  &:focus h3 {
     margin-top: 0;
+  }
+
+  @media (hover: hover) {
+    &:hover h3 {
+      margin-top: 0;
+    }
   }
 
   &::after {
@@ -103,18 +109,27 @@
   cursor: pointer;
 
   .tours__list-item:focus-within &,
-  .tours__list-item:hover & {
+  .tours__list-item:focus & {
     padding: 28px 25px 35px;
     width: 100%;
     background-color: $color-tangaroa;
     overflow-y: auto;
   }
 
+  @media (hover: hover) {
+    .tours__list-item:hover & {
+      padding: 28px 25px 35px;
+      width: 100%;
+      background-color: $color-tangaroa;
+      overflow-y: auto;
+    }
+  }
+
   @include vp-1023 {
     padding: 28px 35px;
 
     .tours__list-item:focus-within &,
-    .tours__list-item:hover & {
+    .tours__list-item:focus & {
       padding-left: 35px;
       padding-right: 35px;
     }
@@ -124,7 +139,7 @@
     padding: 18px 25px;
 
     .tours__list-item:focus-within &,
-    .tours__list-item:hover & {
+    .tours__list-item:focus & {
       padding-left: 25px;
       padding-right: 25px;
     }
@@ -154,11 +169,20 @@
   }
 
   .tours__list-item:focus-within &,
-  .tours__list-item:hover & {
+  .tours__list-item:focus & {
     visibility: visible;
     height: fit-content;
     padding-top: 15px;
     padding-bottom: 15px;
+  }
+
+  @media (hover: hover) {
+    .tours__list-item:hover & {
+      visibility: visible;
+      height: fit-content;
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
   }
 
   @include vp-1023 {
@@ -167,7 +191,7 @@
     }
 
     .tours__list-item:focus-within &,
-    .tours__list-item:hover & {
+    .tours__list-item:focus & {
       padding-top: 12px;
     }
   }
@@ -178,18 +202,27 @@
   width: 100%;
   height: 0;
   font-size: 0;
+  line-height: 21px;
+  font-weight: 600;
+  background-color: $color-seashell;
+  color: $color-tangaroa;
   transition: background-color $trans-default;
 
   .tours__list-item:focus-within &,
-  .tours__list-item:hover & {
+  .tours__list-item:focus & {
     height: fit-content;
     padding: 10px 46px;
     font-size: 14px;
-    line-height: 21px;
-    font-weight: 600;
     text-align: center;
-    background-color: $color-seashell;
-    color: $color-tangaroa;
+  }
+
+  @media (hover: hover) {
+    .tours__list-item:hover & {
+      height: fit-content;
+      padding: 10px 46px;
+      font-size: 14px;
+      text-align: center;
+    }
   }
 
   @include hover {
@@ -206,8 +239,15 @@
   transition: max-height $trans-600;
 
   .tours__list-item:focus-within &,
-  .tours__list-item:hover & {
+  .tours__list-item:focus & {
     visibility: collapse;
     max-height: 0;
+  }
+
+  @media (hover: hover) {
+    .tours__list-item:hover & {
+      visibility: collapse;
+      max-height: 0;
+    }
   }
 }
