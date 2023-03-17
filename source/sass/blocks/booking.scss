@@ -134,6 +134,7 @@
   color: $color-tangaroa;
   border: none;
   transition: opacity $trans-default;
+  user-select: none;
   cursor: pointer;
 
   @include vp-767 {

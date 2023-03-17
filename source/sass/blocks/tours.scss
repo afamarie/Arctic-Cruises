@@ -40,10 +40,6 @@
   gap: 30px;
   list-style: none;
 
-  @include vp-1279 {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-
   @include vp-1023 {
     padding-top: 52px;
     grid-template-columns: 1fr 1fr;
@@ -183,11 +179,12 @@
   background-color: $color-seashell;
   color: $color-tangaroa;
   transition: background-color $trans-default;
+  user-select: none;
 
   .tours__list-item:focus-within &,
   .tours__list-item:hover & {
     height: fit-content;
-    padding: 10px 46px;
+    padding: 10px;
     font-size: 14px;
     text-align: center;
   }

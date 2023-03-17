@@ -67,15 +67,16 @@
 }
 
 .about__image {
-  display: flex;
-  object-fit: cover;
-  height: clamp(100%, 301px, 301px);
+  width: clamp(290px, 40vw, 560px);
+  object-fit: contain;
 
   @include vp-1023 {
+    width: clamp(290px, 42vw, 560px);
     margin-top: 10px;
   }
 
   @include vp-767 {
-    height: auto;
+    justify-self: center;
+    width: calc(100vw - 30px);
   }
 }
