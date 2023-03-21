@@ -1,14 +1,9 @@
 .logo {
   display: inline-block;
-  margin-right: 40px;
   width: fit-content;
   height: fit-content;
   color: $color-seashell;
   transition: color $trans-default;
-
-  @include vp-1023 {
-    margin-right: 25px;
-  }
 
   @include hover-focus {
     color: $color-electric-blue;

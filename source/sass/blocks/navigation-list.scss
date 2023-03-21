@@ -30,6 +30,8 @@
 }
 
 .header .navigation-list {
+  justify-content: flex-end;
+
   @include vp-767 {
     display: none;
   }
@@ -51,12 +53,13 @@
   @include vp-767 {
     position: absolute;
     display: flex;
-    flex-wrap: nowrap;
+    padding: 17px 25px 25px 25px;
     height: 100vh;
     width: 100%;
     right: 0;
     top: 100%;
-    padding: 17px 25px 25px 25px;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
     gap: 28px;
     color: $color-tangaroa;
     background-color: $color-seashell;

@@ -67,7 +67,7 @@
 }
 
 .about__image {
-  width: clamp(290px, 40vw, 560px);
+  width: clamp(290px, 41vw, 560px);
   object-fit: contain;
 
   @include vp-1023 {

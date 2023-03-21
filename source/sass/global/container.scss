@@ -21,8 +21,10 @@
 }
 
 .header .container--header-content {
+  display: grid;
   padding-top: 35px;
   padding-bottom: 35px;
+  grid-template-columns: min-content 1fr;
 
   @include vp-1023 {
     padding-top: 30px;
@@ -30,6 +32,7 @@
   }
 
   @include vp-767 {
+    display: flex;
     padding-top: 20px;
     padding-bottom: 20px;
     flex-direction: column;
@@ -76,19 +79,25 @@
 }
 
 .footer .container {
+  display: grid;
   margin-right: auto;
+  grid-template-columns: min-content minmax(450px, 3fr) minmax(140px, 1fr);
   padding-top: 50px;
   padding-bottom: 45px;
   padding-right: 95px;
+  gap: 40px;
 
   @include vp-1023 {
     padding-right: 35px;
+    gap: 25px;
   }
 
   @include vp-767 {
+    display: flex;
     padding-top: 40px;
     padding-bottom: 30px;
     flex-direction: column;
+    gap: 0;
   }
 }
 
