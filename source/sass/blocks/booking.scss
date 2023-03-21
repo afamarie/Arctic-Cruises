@@ -85,13 +85,15 @@
 }
 
 .booking__form {
+  margin-top: auto;
+  margin-bottom: auto;
   padding: 45px 50px 50px;
   background-color: $color-tangaroa;
   color: $color-seashell;
+  height: fit-content;
 
   fieldset {
     display: flex;
-    flex: 1 1 auto;
     flex-direction: column;
     border: 0;
     gap: 20px;

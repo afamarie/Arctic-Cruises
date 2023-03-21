@@ -78,7 +78,7 @@
 .footer .container {
   margin-right: auto;
   padding-top: 50px;
-  padding-bottom: 43px;
+  padding-bottom: 45px;
   padding-right: 95px;
 
   @include vp-1023 {
@@ -143,6 +143,6 @@
   @include vp-767 {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
   }
 }
