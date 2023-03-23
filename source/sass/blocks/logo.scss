@@ -1,0 +1,39 @@
+.logo {
+  display: inline-block;
+  width: fit-content;
+  height: fit-content;
+  color: $color-seashell;
+  transition: color $trans-default;
+
+  @include hover-focus {
+    color: $color-electric-blue;
+  }
+
+  @include active {
+    color: $color-white;
+  }
+}
+
+.header--no-js .logo,
+.is-open .logo {
+  @include vp-767 {
+    color: $color-tangaroa;
+    padding-left: 15px;
+  }
+}
+
+.logo__icon {
+  width: 70px;
+  height: 38px;
+  fill: currentcolor;
+
+  @include vp-1023 {
+    width: 38px;
+    height: 20px;
+  }
+
+  @include vp-767 {
+    width: 42px;
+    height: 22px;
+  }
+}

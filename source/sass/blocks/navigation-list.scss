@@ -1,0 +1,99 @@
+.navigation-list {
+  display: flex;
+  margin: 0;
+  padding: 11px 0 0;
+  height: fit-content;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 33px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: $color-seashell;
+
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+
+  @include vp-1023 {
+    padding-top: 0;
+    gap: 23px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+    gap: 7px;
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+.header .navigation-list {
+  justify-content: flex-end;
+
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.header--no-js .navigation-list {
+  @include vp-767 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+    color: $color-tangaroa;
+    filter: none;
+  }
+}
+
+.is-open .navigation-list {
+  @include vp-767 {
+    display: flex;
+    padding: 37px 25px 25px 25px;
+    height: 100%;
+    width: 100%;
+    right: 0;
+    top: 100%;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 28px;
+    color: $color-tangaroa;
+    overflow-y: scroll;
+    z-index: 1;
+    filter: none;
+  }
+}
+
+.footer .navigation-list {
+  margin-right: auto;
+
+  @include vp-1023 {
+    padding-top: 5px;
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  @include vp-767 {
+    padding-top: 21px;
+    gap: 17px;
+  }
+}
+
+.navigation-list__link {
+  transition: color $trans-default;
+
+  @include vp-767 {
+    padding: 5px 0;
+  }
+
+  @include hover-focus {
+    color: $color-electric-blue;
+  }
+
+  @include active {
+    color: $color-white;
+  }
+}

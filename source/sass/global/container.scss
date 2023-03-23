@@ -1,0 +1,138 @@
+.container {
+  width: 100%;
+  max-width: 1366px;
+  margin: 0 auto;
+  padding: 0 clamp(45px, 7.5vw, 103px);
+
+  @include vp-1023 {
+    padding: 0 45px;
+  }
+
+  @include vp-767 {
+    padding: 0 15px;
+  }
+}
+
+.header .container--header-content,
+.footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.header .container--intro-content {
+  @include vp-1024 {
+    padding-left: clamp(45px, 14.5vw, 198px);
+    padding-right: clamp(45px, 14.5vw, 198px);
+    min-height: 536px;
+    padding-top: 156px;
+    padding-bottom: 100px;
+  }
+
+  @include vp-1023 {
+    min-height: 553px;
+    padding-top: 180px;
+    padding-bottom: 45px;
+  }
+
+  @include vp-767 {
+    padding-top: 175px;
+    min-height: 500px;
+  }
+}
+
+.is-open .container--header-content {
+  position: relative;
+  margin-left: auto;
+  margin-right: 0;
+  width: calc(100% - 36px);
+  background-color: $color-seashell;
+  z-index: 2;
+}
+
+.header--no-js .container--header-content {
+  @include vp-767 {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+    background-color: $color-seashell;
+  }
+}
+
+.footer .container {
+  display: grid;
+  margin-right: auto;
+  grid-template-columns: min-content minmax(450px, 3fr) minmax(140px, 1fr);
+  padding-top: 50px;
+  padding-bottom: 45px;
+  padding-right: 95px;
+  gap: 40px;
+
+  @include vp-1023 {
+    padding-right: 35px;
+    gap: 25px;
+  }
+
+  @include vp-767 {
+    display: flex;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+.about .container {
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+
+  @include vp-1023 {
+    align-items: flex-start;
+    gap: 29px;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+    gap: 33px;
+  }
+}
+
+.booking .container {
+  display: grid;
+  padding-left: clamp(45px, 12vw, 163px);
+  padding-right: clamp(45px, 12vw, 163px);
+  grid-template-columns: minmax(35%, 520px) minmax(30%, 403px);
+  justify-content: center;
+  gap: clamp(50px, 12%, 144px);
+
+  @include vp-1023 {
+    padding-left: 174px;
+    padding-right: 174px;
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  @include vp-767 {
+    padding-left: 15px;
+    padding-right: 15px;
+    gap: 30px;
+  }
+}
+
+.contacts .container {
+  display: grid;
+  grid-template-columns: minmax(40%, 560px) minmax(40%, 500px);
+  justify-content: center;
+  gap: 20px clamp(30px, 10%, 100px);
+
+  @include vp-1023 {
+    gap: 15px 30px;
+  }
+
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
