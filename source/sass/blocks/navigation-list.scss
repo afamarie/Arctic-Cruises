@@ -51,10 +51,9 @@
 
 .is-open .navigation-list {
   @include vp-767 {
-    position: absolute;
     display: flex;
-    padding: 17px 25px 25px 25px;
-    height: 90vh;
+    padding: 37px 25px 25px 25px;
+    height: 100%;
     width: 100%;
     right: 0;
     top: 100%;
@@ -62,7 +61,6 @@
     justify-content: flex-start;
     gap: 28px;
     color: $color-tangaroa;
-    background-color: $color-seashell;
     overflow-y: scroll;
     z-index: 1;
     filter: none;

@@ -1,6 +1,7 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {Form} from './modules/form-validate/form';
 import {Burger} from './modules/header/burger';
+import './vendor/focus-visible-polyfill';
 
 const header = document.querySelector('.header');
 header.classList.remove('header--no-js');

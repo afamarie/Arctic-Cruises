@@ -17,29 +17,31 @@
       <header class="header header--no-js" data-header>
         <div class="header__overlay" data-close-menu></div>
         <div class="container container--header-content">
-          <a class="logo" href="index.html" aria-current="page" aria-label="Главная страница.">
-            <svg class="logo__icon" width="70" height="38">
-              <use xlink:href="img/sprite.svg#logo"></use>
-            </svg>
-          </a>
-          <ul class="navigation-list">
-            <li class="navigation-list__item">
-              <a class="navigation-list__link" href="#advantages">Преимущества</a>
-            </li>
-            <li class="navigation-list__item">
-              <a class="navigation-list__link" href="#">Направления</a>
-            </li>
-            <li class="navigation-list__item">
-              <a class="navigation-list__link" href="#tours">Ближайшие круизы</a>
-            </li>
-            <li class="navigation-list__item">
-              <a class="navigation-list__link" href="#contacts">Контакты</a>
-            </li>
-          </ul>
-          <button class="burger" data-burger>
-            <span class="visually-hidden">Открыть меню.</span>
-            <span class="burger__cross"></span>
-          </button>
+          <div class="header__nav-wrapper">
+            <a class="logo" href="index.html" aria-current="page" aria-label="Главная страница.">
+              <svg class="logo__icon" width="70" height="38">
+                <use xlink:href="img/sprite.svg#logo"></use>
+              </svg>
+            </a>
+            <button class="burger" data-burger>
+              <span class="visually-hidden">Открыть меню.</span>
+              <span class="burger__cross"></span>
+            </button>
+            <ul class="navigation-list">
+              <li class="navigation-list__item">
+                <a class="navigation-list__link" href="#advantages">Преимущества</a>
+              </li>
+              <li class="navigation-list__item">
+                <a class="navigation-list__link" href="#">Направления</a>
+              </li>
+              <li class="navigation-list__item">
+                <a class="navigation-list__link" href="#tours">Ближайшие круизы</a>
+              </li>
+              <li class="navigation-list__item">
+                <a class="navigation-list__link" href="#contacts">Контакты</a>
+              </li>
+            </ul>
+          </div>
         </div>
         <div class="container container--intro-content">
           <h1>Круизы в&nbsp;Антарктику</h1>
@@ -379,5 +381,6 @@
     </div>
 
     <script src="js/main.min.js"></script>
+    <script src="js/vendor.min.js"></script>
   </body>
 </html>
